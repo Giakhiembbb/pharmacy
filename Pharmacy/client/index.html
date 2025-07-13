@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - Coffee Management</title>
+
+    <link rel="shortcut icon" href="./src/img/logo.png" type="image/x-icon">
+
+    <!-- Bootstrap 5 cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <!-- FontAwesome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Main css  -->
+    <link rel="stylesheet" href="./src/css/main.css">
+
+    <!-- Index  CSS  -->
+    <link rel="stylesheet" href="./src/css/index.css">
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+        <div class="banner-group">
+            <header>
+                <div class="container d-flex justify-content-between align-items-center">
+                    <div class="logo">
+                        <img src="./src/img/ChatGPT Image 07_50_33 21 thg 6, 2025.png" alt="Coffee Mangement Logo">
+                    </div>
+                    <ul class="nav pe-4 align-items-center">
+                        <li class="nav-item">
+                            <a href="./index.html" class="nav-link text-white">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./menu.html" class="nav-link text-white">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-white"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </li>
+                        <div class="profile">
+                            <button type="button" id="profile-dropdown" class="dropdown-toggle btn btn-outline-light"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-user"></i>
+                                Tài khoản
+                            </button>
+                            <ul id="author-menu-drd" class="dropdown-menu" aria-labelledby="profile-dropdown">
+                                <li><a class="dropdown-item" href="./login.html">Đăng nhập</a></li>
+                                <li><a class="dropdown-item" href="./register.html">Đăng ký</a></li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </header>
+
+            <div class="banner-text text-start ps-5">
+                <h1 class="title text-start">Chào mừng đến với <span class="text-primary">Meditrust</span></h1>
+                <p class="text-muted mt-3 fs-5">Hãy tận hưởng quá trình mua sắm của bạn nhé!</p>
+                <button class="btn btn-primary px-5 py-2 rounded-pill mt-4 fw-bold">
+                    Mua ngay
+                </button>
+            </div>
+        </div>
+
+        <section class="container mt-5">
+            <div class="row align-items-center">
+                
+                </div>
+                <div class="col-lg-6 col-12">
+                    <h2 class="text-primary">Meditrust- Medical-Trust</h2>
+                    <p class="text-muted">Chúng tôi cung cấp các loại thuốc chất lượng, tư vấn tận tâm trong không gian thân thiện và chuyên nghiệp. Hãy đến và chăm sóc sức khỏe cùng người thân, bạn bè!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container my-5">
+            <h3 class="text-center mb-4 text-primary">Sản phẩm mới nhất</h3>
+
+            
+            
+          
+        </section>
+<!-- footer -->
+        <footer class="bg-dark text-white py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Về chúng tôi</h5>
+                        <p>Địa chỉ: Thành phố Hồ Chí Minh</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Đăng ký nhận tin</h5>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Nhập email của bạn ...">
+                            <button type="buttons" class="btn btn-primary">Gửi</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Liên hệ</h5>
+                        <p>Hotline:0123456789</p>
+                    </div>
+                
+                </div>
+                <hr>
+                <div class="text-center mt-4">
+                    <p class="text-light">&copy; 2025 Pharmacy. All rights reserved. Powered by <strong>Khiem</strong></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <!-- Bootstrap 5 cdn  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+
+    <script type="module" src="./src/js/index.js"></script>
+    <script type="module" src="./src/js/firebase-config.js"></script>
+    
+</body>
+
+</html>
