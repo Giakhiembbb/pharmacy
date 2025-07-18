@@ -1,0 +1,51 @@
+:root {
+    --color-primary: #7FA1C3;
+    --color-danger: #C80036;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-grey: #5c5c5e;
+    --color-grey-light: #dcdcdc;
+}
+
+.logo img {
+    max-width: 200px;
+}
+
+/* rounded */
+.rounded-sm {
+    border-radius: 4px;
+}
+
+.rounded-md {
+    border-radius: 8px;
+}
+
+/* button  */
+.btn-primary {
+    background-color: var(--color-primary);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary);
+    opacity: 0.9;
+}
+
+.btn-danger {
+    background-color: var(--color-danger);
+    color: var(--color-white);
+}
+
+.btn-cancle {
+    margin: 8px 0px;
+    border: 1px solid var(--color-grey);
+}
+
+.shadow-md {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+/* layout */
+.page-wrapper {
+    min-height: 100vh;
+}

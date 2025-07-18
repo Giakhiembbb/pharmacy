@@ -18,6 +18,13 @@ const firebaseConfig = {
   measurementId: "G-DGM9F3614Q"
 };
 
-// Initialize Firebase
+// Khởi tạo Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+// Khởi tạo các dịch vụ
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+// Xuất các dịch vụ để dùng trong các file khác
+export { auth, db };
