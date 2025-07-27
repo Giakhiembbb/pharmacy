@@ -1,8 +1,8 @@
-import { auth } from './firebase-config';
+import { auth } from './firebase-config.js';
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-auth.js";
 
-const inpEmail = document.querySelector(".inp-email");
-const inpPwd = document.querySelector(".inp-pwd");
+const inpEmail = document.querySelector("#email");
+const inpPwd = document.querySelector("#password");
 const loginForm = document.querySelector("#login-form");
 
 function handleLogin(event) {

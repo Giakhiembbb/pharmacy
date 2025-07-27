@@ -1,0 +1,109 @@
+:root {
+  --color-primary: #40916c;
+  --color-secondary: #d8f3dc;
+  --color-accent: #1b4332;
+  --color-white: #ffffff;
+  --color-grey: #f1f3f5;
+  --color-text: #212529;
+  --color-danger: #dc3545;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--color-grey);
+  color: var(--color-text);
+}
+
+.page-wrapper {
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: var(--color-primary);
+  padding-top: 1rem;
+  min-height: 100vh;
+  color: var(--color-white);
+}
+
+.sidebar .logo img {
+  max-width: 100px;
+}
+
+.sidebar .menu {
+  list-style: none;
+}
+
+.sidebar .menu li a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.sidebar .menu li a:hover {
+  background-color: var(--color-accent);
+  border-radius: 8px;
+}
+
+.content-admin {
+  background-color: var(--color-grey);
+  padding: 2rem;
+}
+
+.shadow-md {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.product-table img {
+  max-width: 50px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.btn {
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent);
+}
+
+.btn-cancle {
+  background-color: #adb5bd;
+  color: white;
+  border: none;
+}
+
+.btn-cancle:hover {
+  background-color: #6c757d;
+}
+
+.btn-delete-product {
+  background-color: var(--color-danger);
+  color: white;
+  border: none;
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+
+.btn-delete-product:hover {
+  background-color: #b02a37;
+}
+
+table thead {
+  background-color: var(--color-secondary);
+}
+
+table th, table td {
+  vertical-align: middle !important;
+}
