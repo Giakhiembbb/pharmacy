@@ -1,0 +1,95 @@
+/* === Giao diện menu giống Pharmacity === */
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #0078d4;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: #e2e6ea;
+}
+
+.product-list {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.product-item .content {
+  border: 1px solid #dee2e6;
+  background-color: #ffffff;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.product-item .content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+  max-height: 180px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.product-item .text h5 {
+  color: #0078d4;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+}
+
+.product-item .btn-order {
+  background-color: #28a745;
+  border: none;
+}
+
+.product-item .btn-order:hover {
+  background-color: #218838;
+}
+
+.order-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.order-form .content {
+  max-width: 800px;
+  background-color: #fff;
+}
+
+.btn-primary {
+  background-color: #0078d4;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0063b1;
+}
+
+.btn-outline-dark {
+  float: right;
+}

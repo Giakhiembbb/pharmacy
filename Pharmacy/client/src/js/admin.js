@@ -48,16 +48,66 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 });
 
+
+// Thêm sản phẩm 
+document.getElementById('data-form').addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const productName = document.getElementById("data-name").value;
+  const productPrice = document.getElementById("data-price").value;
+  const productImage = document.getElementById("data-image").files[0];
+
+  if (!productName || !productPrice || !productImage) {
+    alert("Vui lòng điền đầy đủ thông tin!");
+    return;
+  }
+
+  try {
+    const formData = new FormData();
+    formData.append("image", productImage);
+
+    const response = await fetch("http://localhost:3000/upload", { 
+      method: "POST",
+      body: formData,
+    });
+
+    const result = await response.json();
+    console.log(result)
+    
+    if (!result.data?.secure_url) {
+      throw new Error("Upload ảnh thất bại!");
+    }
+
+    await addDoc(collection(db, "products"), {
+      name: productName,
+      price: parseFloat(productPrice),
+      imageUrl: result.data.secure_url,
+      createdAt: serverTimestamp(),
+    });
+
+    alert("Thêm sản phẩm thành công!");
+    document.getElementById("product-form").reset();
+    await loadProducts();
+  } catch (error) {
+    console.error("Lỗi khi thêm sản phẩm:", error);
+    alert("Có lỗi xảy ra khi thêm sản phẩm!");
+  }
+});
+
+
+
 async function loadProducts() {
   try {
-    const productTable = document.querySelector("tbody");
+    const productTable = document.querySelector("product-list");
     let htmls = "";
+    let index =1 ;
     const querySnapshot = await getDocs(collection(db, "products"));
 
     querySnapshot.forEach((doc) => {
       const product = doc.data();
       htmls += `
         <tr>
+          <th>${index}</th>
           <td>${product.name}</td>
           <td>${product.type || ''}</td>
           <td>${product.price?.toLocaleString('vi-VN')}</td>

@@ -1,109 +1,51 @@
-:root {
-  --color-white: #ffffff;
-  --color-grey-light: #ced4da;
-  --color-primary: #40916c; /* Xanh lá dịu */
-  --color-primary-light: rgba(64, 145, 108, 0.15);
-  --color-text: #343a40;
-  --color-danger: #dc3545;
-  --color-success: #198754;
-}
-
-/* ======= BACKGROUND ======= */
 body {
-  background: url('../img/e8b2c446-66f1-4c4a-bc35-6236d2a87ffa.png') no-repeat center center fixed;
-  background-size: cover;
-  background-color: #f8f9fa;
-  position: relative;
-  color: var(--color-text);
+  background-color: #f0f8ff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(255, 255, 255, 0.85); /* lớp phủ mờ */
-  z-index: -1;
+.wallet-container {
+  max-width: 600px;
+  margin: auto;
 }
 
-/* ======= Số dư ======= */
-.balance-info {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-grey-light);
-  border-radius: 8px;
-}
-
-.balance-number {
-  font-size: 1.5rem;
+.section-title {
   font-weight: 600;
-  color: var(--color-primary);
+  color: #2c3e50;
 }
 
-/* ======= Form nạp tiền ======= */
-#balance-form {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-grey-light);
-  border-radius: 8px;
+.balance-display {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #27ae60;
 }
 
-#balance-form .form-control,
-#balance-form select {
-  border-color: var(--color-grey-light);
-  transition: border-color 0.3s, box-shadow 0.3s;
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-#balance-form .form-control:focus,
-#balance-form select:focus {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 5px var(--color-primary-light);
+.transaction-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-left: 4px solid #3498db;
+  background-color: #ecf0f1;
+  border-radius: 6px;
 }
 
-/* ======= Lịch sử giao dịch ======= */
-.transaction-history {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-grey-light);
-  border-radius: 8px;
-  max-height: 400px;
-  overflow-y: auto;
-}
-
-.transaction-list .transaction-item {
-  padding: 12px 0;
-  border-bottom: 1px solid var(--color-grey-light);
-  color: var(--color-text);
-}
-
-.transaction-list .transaction-item:last-child {
-  border-bottom: none;
-}
-
-.transaction-list .transaction-item span {
+.transaction-item span {
   font-size: 0.95rem;
 }
 
-.transaction-list .transaction-item .amount {
-  font-weight: 600;
+.amount {
+  font-weight: bold;
 }
 
-.transaction-list .text-success {
-  color: var(--color-success);
+.text-success {
+  color: #27ae60 !important;
 }
 
-.transaction-list .text-danger {
-  color: var(--color-danger);
-}
-
-/* ======= Button ======= */
-.btn-primary {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
-}
-
-.btn-primary:hover {
-  background-color: #357a5b;
-  border-color: #357a5b;
-}
-
-.btn-outline-light:hover {
-  background-color: var(--color-primary-light);
-  color: var(--color-primary);
+.text-danger {
+  color: #e74c3c !important;
 }
