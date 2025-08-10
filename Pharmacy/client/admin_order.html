@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Orders</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./src/css/admin.css">
+  <!-- <link rel="stylesheet" href="./src/css/admin_orders.css"> -->
+</head>
+<body>
+  <div class="page-wrapper row">
+    <div class="sidebar col-md-2">
+       <div class="logo text-center mb-4">
+        <img src="./src/img/ChatGPT Image 07_50_33 21 thg 6, 2025.png" alt="Logo">
+      </div>
+      <ul class="menu p-0">
+        <li><a href="./admin.html">Sản phẩm</a></li>
+        <li><a href="./admin_order.html">Đơn hàng</a></li>
+      </ul>
+    </div>
+    <div class="content-admin col-md-10 p-4">
+      <div class="product-table p-4  shadow-md rounded-md">
+        <h5>Danh sách đơn hàng</h5>
+        <table class="table table-hover">
+          <thead>
+            <tr class="text-center">
+              <th>#</th>
+              <th>Khách hàng</th>
+              <th>Tên sản phẩm</th>
+              <th>Tổng tiền</th>
+              <th>Trạng thái</th>
+            </tr>
+          </thead>
+          <tbody id="order-admin">
+            <!-- <tr class="product-item text-center">
+              <th>1</th>
+              <td>Nguyễn Văn A</td>
+              <td>Trà sen vàng</td>
+              <td>250000 VND</td>
+              <td>
+                <select class="slt-order-status" data-order-id="OD123456">
+                  <option value="0">Chờ xác nhận</option>
+                  <option value="1">Chờ vận chuyển</option>
+                  <option value="2">Đã nhận hàng</option>
+                  <option value="3">Đã hủy</option>
+                </select>
+              </td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <!-- Page-specific JS -->
+  <script type="module" src="./src/js/admin_orders.js"></script>
+</body>
+</html>

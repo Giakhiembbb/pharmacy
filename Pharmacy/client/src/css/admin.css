@@ -107,3 +107,5 @@ table thead {
 table th, table td {
   vertical-align: middle !important;
 }
+
+img{width:100px;}

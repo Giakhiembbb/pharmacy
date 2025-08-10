@@ -19,12 +19,20 @@ function handleRegister(event) {
   let confirmPassword = inpConfirmPwd.value;
   let role_id = 2; // Guest mặc định
 
+    const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
+    
+
   if (!username || !email || !password || !confirmPassword) {
     alert("Vui lòng điền đủ các trường");
     return;
   }
   if (password !== confirmPassword) {
     alert("Mật khẩu không khớp");
+    return;
+  }
+
+  if (!specialCharRegex.test(password)) {
+    alert("Mật khẩu phải chứa ít nhất 1 ký tự đặc biệt");
     return;
   }
 

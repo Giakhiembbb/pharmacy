@@ -16,9 +16,7 @@
         <img src="./src/img/ChatGPT Image 07_50_33 21 thg 6, 2025.png" alt="Logo">
       </div>
       <ul class="menu">
-        <li><a href="#"><i class="fas fa-tachometer-alt me-2"></i> Bảng điều khiển</a></li>
-        <li><a href="#"><i class="fas fa-user-cog me-2"></i> Quản lý</a></li>
-        <li><a href="#"><i class="fas fa-sign-out-alt me-2"></i> Đăng xuất</a></li>
+        <li><a href="./admin_order.html"><i class="fas fa-sign-out-alt me-2"></i>Đơn hàng</a></li>
       </ul>
     </aside>
 
@@ -31,14 +29,38 @@
         <div class="shadow-md p-4 mb-4">
           <form id="data-form">
             <div class="row g-3">
+              <!-- them 12 trường -->
               <div class="col-md-4">
                 <input type="text" class="form-control" id="data-name" placeholder="Tên" required />
               </div>
               <div class="col-md-4">
-                <input type="text" class="form-control" id="data-price" placeholder="Mô tả" required />
+                <input type="number" class="form-control" id="data-price" placeholder="Giá" required />
               </div>
               <div class="col-md-4">
                 <input type="file" class="form-control" id="data-image" accept="image/*" />
+              </div>
+             
+              <div class="col-md-4">
+                <input type="text" class="form-control" id="data-description" placeholder="Mô tả" required />
+              </div>
+              <div class="col-md-4">
+                <input type="text" class="form-control" id="data-producer" placeholder="Nhà sản xuất" required />
+              </div>
+              <div class="col-md-4">
+                <input type="text" class="form-control" id="data-shape" placeholder="Dạng bào chế" required />
+              </div>
+              <div class="col-md-4">
+                <input type="text" class="form-control" id="data-dosage" placeholder="Liều lượng" required />
+              </div>
+             
+               <div class="col-md-4">
+                <input type="text" class="form-control" id="data-packaging" placeholder="Gói" required />
+              </div>
+               <div class="col-md-4">
+                <input type="text" class="form-control" id="data-sideEffects" placeholder="Tác dụng phụ" required />
+              </div>
+               <div class="col-md-4">
+                <input type="text" class="form-control" id="data-uses" placeholder="Tác dụng chính" required />
               </div>
             </div>
             <div class="mt-3">

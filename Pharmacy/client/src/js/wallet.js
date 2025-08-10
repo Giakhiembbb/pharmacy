@@ -30,6 +30,12 @@ function formatCurrency(amount) {
   return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
 }
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadBalance();
+  loadTransactionHistory();
+})
+
 // Tải số dư từ Firestore
 async function loadBalance() {
   const balanceElement = document.querySelector('.balance-number');
@@ -161,3 +167,9 @@ if (form) {
     }
   });
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadBalance();
+  loadTransactionHistory();
+})

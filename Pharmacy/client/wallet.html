@@ -1,69 +1,108 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ví điện tử - Dược phẩm</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ví điện tử - Dược phẩm</title>
 
-  <!-- Bootstrap (bố cục + responsive) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap (bố cục + responsive) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Font Awesome (icon) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Font Awesome (icon) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="./src/css/wallet.css" />
-</head>
-<body>
-  <div class="wallet-container container py-4">
-    <h2 class="text-center mb-4 text-primary">💊 Ví Điện Tử Dược Phẩm</h2>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./src/css/wallet.css" />
+  </head>
+  <body>
+    <a class="logo-container btn-primary" href="index.html">
+      <i class="fa-solid fa-house-chimney"></i>
+    </a>
+    <div class="wallet-container container py-4">
+      <h2 class="text-center mb-4 text-primary">💊 Ví Điện Tử Dược Phẩm</h2>
 
-    <!-- Số dư -->
-    <div class="card shadow-sm mb-4">
-      <div class="card-body">
-        <h5 class="section-title mb-3">Số dư ví</h5>
-        <div id="balance-display" class="balance-display balance-number">₫0</div>
-        <div id="last-updated" class="text-muted small mt-2"></div>
+      <!-- Số dư -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="section-title mb-3">Số dư ví</h5>
+          <div id="balance-display" class="balance-display balance-number">
+            ₫0
+          </div>
+          <div id="last-updated" class="text-muted small mt-2"></div>
+        </div>
+      </div>
+
+      <!-- Nạp tiền -->
+      <div class="card shadow-sm mb-4">
+        <div class="card-body">
+          <h5 class="section-title mb-3">Nạp tiền vào ví</h5>
+          <form id="balance-form">
+            <div class="mb-3">
+              <label for="card-number" class="form-label">Số thẻ</label>
+              <input
+                type="text"
+                id="card-number"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="bank-select" class="form-label">Ngân hàng</label>
+              <select id="bank-select" class="form-select" required>
+                <option value="">-- Chọn ngân hàng --</option>
+                <option value="Vietcombank">Vietcombank</option>
+                <option value="MB Bank">MB Bank</option>
+                <option value="TPBank">TPBank</option>
+                <option value="BIDV">BIDV</option>
+                <option value="VietinBank">VietinBank</option>
+                <option value="Agribank">Agribank</option>
+                <option value="ACB">ACB (Ngân hàng Á Châu)</option>
+                <option value="Sacombank">Sacombank</option>
+                <option value="Techcombank">Techcombank</option>
+                <option value="VPBank">VPBank</option>
+                <option value="SHB">SHB (Ngân hàng Sài Gòn – Hà Nội)</option>
+                <option value="HDBank">HDBank</option>
+                <option value="SCB">SCB (Ngân hàng Sài Gòn)</option>
+                <option value="Nam A Bank">Nam A Bank</option>
+                <option value="LienVietPostBank">LienVietPostBank</option>
+                <option value="Eximbank">Eximbank</option>
+                <option value="OceanBank">OceanBank</option>
+                <option value="Bac A Bank">Bac A Bank</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="amount" class="form-label">Số tiền (VND)</label>
+              <input
+                type="number"
+                id="amount"
+                class="form-control"
+                min="10000"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-success w-100">
+              Nạp tiền
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Lịch sử giao dịch -->
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="section-title mb-3">Lịch sử giao dịch</h5>
+          <div id="transaction-history" class="transaction-list"></div>
+        </div>
       </div>
     </div>
 
-    <!-- Nạp tiền -->
-    <div class="card shadow-sm mb-4">
-      <div class="card-body">
-        <h5 class="section-title mb-3">Nạp tiền vào ví</h5>
-        <form id="balance-form">
-          <div class="mb-3">
-            <label for="card-number" class="form-label">Số thẻ</label>
-            <input type="text" id="card-number" class="form-control" required />
-          </div>
-          <div class="mb-3">
-            <label for="bank-select" class="form-label">Ngân hàng</label>
-            <select id="bank-select" class="form-select" required>
-              <option value="">-- Chọn ngân hàng --</option>
-              <option value="Vietcombank">Vietcombank</option>
-              <option value="MB Bank">MB Bank</option>
-              <option value="TPBank">TPBank</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="amount" class="form-label">Số tiền (VND)</label>
-            <input type="number" id="amount" class="form-control" min="10000" required />
-          </div>
-          <button type="submit" class="btn btn-success w-100">Nạp tiền</button>
-        </form>
-      </div>
-    </div>
-
-    <!-- Lịch sử giao dịch -->
-    <div class="card shadow-sm">
-      <div class="card-body">
-        <h5 class="section-title mb-3">Lịch sử giao dịch</h5>
-        <div id="transaction-history" class="transaction-list"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Script -->
-  <script type="module" src="./src/js/wallet.js"></script>
-</body>
+    <!-- Script -->
+    <script type="module" src="./src/js/wallet.js"></script>
+  </body>
 </html>

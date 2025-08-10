@@ -49,3 +49,13 @@ body {
 .text-danger {
   color: #e74c3c !important;
 }
+
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #878787;
+    padding: 10px 20px;
+    border-radius: 10px;
+    opacity: 0.5;
+}

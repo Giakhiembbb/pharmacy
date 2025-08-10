@@ -39,7 +39,7 @@ export async function getProductList(container, limitCount) {
                 <h5 class="mb-2 text-uppercase">${product.name}</h5>
                 <p class="mb-3">Giá: <span class="fs-6 fw-semibold text-danger">${formattedPrice}</span></p>
               </div>
-              <button class="btn btn-primary btn-order mt-2 w-100" data-id="${productId}">Đặt hàng</button>
+              <button class="btn btn-primary btn-order mt-2 w-100" data-id="${productId}">Xem</button>
             </div>
           </div>
         </div>
@@ -89,20 +89,11 @@ async function showOrderForm(productId) {
               <p><strong>Mô tả:</strong> ${product.description || "Đang cập nhật"}</p>
               <p><strong>Số lượng:</strong> ${product.packaging || "Đang cập nhật"}</p>
               <p><strong>Liều dùng:</strong> ${product.dosage || "Đang cập nhật"}</p>
+              <p><strong>Nhà sản xuất:</strong> ${product.producer|| "Đang cập nhật"}</p>
+              <p><strong>Dạng:</strong> ${product.shape || "Đang cập nhật"}</p>
               <p><strong>Tác dụng chính:</strong> ${product.uses|| "Đang cập nhật"}</p>
               <p><strong>Tác dụng phụ:</strong> ${product.sideEffects || "Đang cập nhật"}</p>
 
-              <form id="order-form">
-                <div class="mb-3">
-                  <label for="quantity" class="form-label">Số lượng</label>
-                  <input type="number" class="form-control" id="quantity" value="1" min="1" required>
-                </div>
-                <button type="submit" class="btn btn-primary btn-confirm-order w-100"
-                  data-price="${product.price}">Xác nhận</button>
-              </form>
-            </div>
-          </div>
-        </div>
       `;
 
       // Đóng form
@@ -167,12 +158,12 @@ async function handleOrder(productId, quantity, productPrice) {
           name: product.name,
           price: product.price,
           imageUrl: product.imageUrl,
-          manufacturer: product.manufacturer || "",
+          producer: product.producer || "",
           packaging: product.packaging || "",
           descript: product.descript || "",
           dosage: product.dosage || "",
           sideEffects: product.sideEffects || "",
-          contraindication: product.contraindication || "",
+          shape: product.shape|| "",
           interactions: product.interactions || ""
         },
         quantity: parseInt(quantity),
